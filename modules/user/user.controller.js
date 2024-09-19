@@ -24,7 +24,6 @@ const registerUser = async (req, res) => {
     const otp = Math.floor(1000 + Math.random() * 9000).toString();
     user.otp = otp;
 
-    // Send OTP email using nodemailer
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
